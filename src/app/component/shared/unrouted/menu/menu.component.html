@@ -1,0 +1,15 @@
+<div class="grid p-fluid">
+  <div class="col-12">
+    <div class="card card-w-title flex flex-wrap">
+        <div class="col-12 md:col-8 h-full">
+            
+            <p-tabMenu styleClass="mb-5" [model]="routeItems" [activeItem]="routeItems[0]"></p-tabMenu>
+
+
+        </div>
+        <div class="col-12 md:col-4 mt-5 md:mt-0">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+</div>
