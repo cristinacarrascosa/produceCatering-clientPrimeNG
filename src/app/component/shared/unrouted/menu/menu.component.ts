@@ -14,20 +14,30 @@ export class MenuComponent implements OnInit {
     activeItem: MenuItem;
 
     pageIndex: number = 0;
+    router: any;
 
     ngOnInit() {
 
 
         this.routeItems = [
-            {label: 'Home', icon: 'pi pi-fw pi-home', routerLink: 'home',},
-            {label: 'Login', icon: 'pi pi-fw pi-user'},
+            {label: 'Home',
+            icon: 'pi pi-fw pi-home',
+            routerLink: 'home',},
+
+            {label: 'Login',
+            icon: 'pi pi-fw pi-user'},
+
             {label: 'Tipo usuario',
             icon: 'pi pi-fw pi-user',
-             //command: () => this.router.navigate(['tab-1']),
+            //command: () => this.router.navigate(['admin/tipousuario/plist']),
             routerLink: 'admin/tipousuario/plist',},
-            {label: 'Documentation', icon: 'pi pi-fw pi-file'},
+
+            {label: 'Documentation',
+            icon: 'pi pi-fw pi-file'},
             {label: 'Settings', icon: 'pi pi-fw pi-cog'},
-            {label: 'Salir', icon: 'pi pi-fw pi-sign-out'},
+
+            {label: 'Salir',
+            icon: 'pi pi-fw pi-sign-out'},
         ];
 
         this.activeItem = this.routeItems[0];

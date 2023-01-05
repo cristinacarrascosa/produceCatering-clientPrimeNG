@@ -5,6 +5,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {TabMenuModule} from 'primeng/tabmenu';
 import {MenuItem} from 'primeng/api';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 
 import { HomeComponent } from './component/shared/routed/home/home.component';
@@ -29,6 +31,7 @@ import { TipousuarioPlistAdminRoutedComponent } from './component/application/Ti
     ButtonModule,
     BrowserAnimationsModule,
     TabMenuModule,
+    HttpClientModule
 
 
 

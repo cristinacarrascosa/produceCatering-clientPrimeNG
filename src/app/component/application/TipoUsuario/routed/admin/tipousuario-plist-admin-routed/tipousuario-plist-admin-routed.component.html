@@ -1,1 +1,22 @@
-<p>tipousuario-plist-admin-routed works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="titulo">Lista de tipos de usuario</h1>
+      <table class="tabla">
+        <thead>
+          <tr >
+            <th >ID</th>
+            <th >Tipo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tipousuario of this.getPlistContent()">
+            <td>{{tipousuario.id}}</td>
+            <td>{{tipousuario.tipo}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
