@@ -56,7 +56,7 @@ export class MenuComponent implements OnInit {
             {label: 'Usuario',
             icon: 'pi pi-fw pi-list',
             //command: () => this.router.navigate(['admin/usuario/view/:id']),
-            routerLink: 'admin/usuario/view/:id',},
+            routerLink: 'admin/usuario/plist',},
 
             {label: 'Settings',
              icon: 'pi pi-fw pi-cog'},

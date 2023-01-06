@@ -17,7 +17,8 @@ export class UsuarioService {
     this.url = `${baseURL}${this.entityURL}`;
   }
 
-  getUsuariosPlist(page: number, size: number, termino: string, id_tipousuario: number, strSortField: string, strOrderDirection: string): Observable<IPage<UsuarioResponse>> {
+  getUsuariosPlist(page: number, size: number, termino: string, id_tipousuario: number,
+    strSortField: string, strOrderDirection: string): Observable<IPage<UsuarioResponse>> {
     let params = new HttpParams()
       .set("page", page)
       .set("size", size)
@@ -52,8 +53,9 @@ export class UsuarioService {
     return this.oHttp.post<number>(this.url+'/', oUsuario2Send);
   }
 
-  getUsuariosList(): Observable<IUsuario[]> {
+  getUsuariosList(): Observable<UsuarioResponse> {
     let params = new HttpParams()
-    return this.oHttp.get<IUsuario[]>(this.url, { params: params });
+      
+    return this.oHttp.get<UsuarioResponse>(this.url, {params: params});
   }
 }
