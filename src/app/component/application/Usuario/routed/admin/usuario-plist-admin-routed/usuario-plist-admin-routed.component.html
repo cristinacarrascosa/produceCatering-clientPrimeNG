@@ -1,18 +1,18 @@
 <div class="ui-g">
-<p-panel header="Administración de usuarios" [style]="{width: '90%'}">
-<div class="justify-content-start" [style]="{width: '20%'}" (click)="showAddModal()">
-  <p-button label="Añadir usuario" icon="pi pi-plus" ></p-button>
-  <!-- <p-button label="Editar" icon="pi pi-pencil" ></p-button>
+  <p-panel header="Administración de usuarios" [style]="{width: '90%'}">
+    <div class="justify-content-start" [style]="{width: '20%'}" (click)="showAddModal()">
+      <p-button label="Añadir usuario" icon="pi pi-plus"></p-button>
+      <!-- <p-button label="Editar" icon="pi pi-pencil" ></p-button>
   <p-button label="Borrar" icon="pi pi-trash" ></p-button>
   <p-button label="Detalles" icon="pi pi-info-circle" ></p-button>
   <p-button label="Filtrar" icon="pi pi-filter" ></p-button>
   <p-button label="Ordenar" icon="pi pi-sort" ></p-button>
   <p-button label="Paginar" icon="pi pi-external-link" ></p-button>
   <p-button label="Recargar" icon="pi pi-refresh" ></p-button> -->
-</div>
-<p-table [value]="usuarios" [paginator]="true" [rows]="5">
-  <ng-template pTemplate="header">
-      <tr>
+    </div>
+    <p-table [value]="usuarios">
+      <ng-template pTemplate="header">
+        <tr>
           <th>Id</th>
           <th>Nombre</th>
           <th>Apellidos</th>
@@ -20,10 +20,10 @@
           <th>email</th>
           <th>Login</th>
           <th>Tipo de Usuario</th>
-      </tr>
-  </ng-template>
-  <ng-template pTemplate="body" let-usuario>
-      <tr>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-usuario>
+        <tr>
           <td>{{usuario.id}}</td>
           <td>{{usuario.nombre}}</td>
           <td>{{usuario.apellidos}}</td>
@@ -31,23 +31,28 @@
           <td>{{usuario.email}}</td>
           <td>{{usuario.login}}</td>
           <td>{{usuario.tipousuario.tipo}}</td>
-      </tr>
-  </ng-template>
-</p-table>
-</p-panel>
+          <td>
+            <!-- [routerLink]="['admin/usuario/new']" -->
+            <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2" [routerLink]="['admin/usuario/new']"></button>
+            <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" ></button>
+        </td>
+        </tr>
+      </ng-template>
+    </p-table>
+    <p-paginator [totalRecords]="totalElements" [rows]="5" [showCurrentPageReport]="true"
+      [rowsPerPageOptions]="[5,10,15,20]" (onPageChange)="setPage($event)"></p-paginator>
+  </p-panel>
 </div>
 
-<p-dialog header="Añadir usuario"
-[(visible)]="displayAddModal"
-[modal]="true"
-[style]="{width: '50vw'}"
-[draggable]="false"
-[resizable]="false">
-    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <ng-template pTemplate="footer">
-        <p-button  (click)="displayAddModal=false" label="Guardar" styleClass="p-button-text"></p-button>
+<p-dialog header="Añadir usuario" [(visible)]="displayAddModal" [modal]="true" [style]="{width: '50vw'}"
+  [draggable]="false" [resizable]="false">
+  <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <ng-template pTemplate="footer">
+    <p-button (click)="displayAddModal=false" label="Guardar" styleClass="p-button-text"></p-button>
 
-        </ng-template>
+  </ng-template>
 </p-dialog>

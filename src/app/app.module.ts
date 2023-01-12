@@ -19,12 +19,14 @@ import { HomeComponent } from './component/shared/routed/home/home.component';
 import { MenuComponent } from './component/shared/unrouted/menu/menu.component';
 
 import { TipousuarioPlistAdminRoutedComponent } from './component/application/TipoUsuario/routed/admin/tipousuario-plist-admin-routed/tipousuario-plist-admin-routed.component';
+
 import { UsuarioViewAdminRoutedComponent } from './component/application/Usuario/routed/admin/usuario-view-admin-routed/usuario-view-admin-routed.component';
 import { UsuarioPlistAdminRoutedComponent } from './component/application/Usuario/routed/admin/usuario-plist-admin-routed/usuario-plist-admin-routed.component';
-
+import { UsuarioNewAdminRoutedComponent } from './component/application/Usuario/routed/admin/usuario-new-admin-routed/usuario-new-admin-routed.component';
 
 import { UsuarioService } from './service/usuario.service';
 import { SessionService } from './service/session.service';
+
 
 
 @NgModule({
@@ -35,6 +37,7 @@ import { SessionService } from './service/session.service';
     TipousuarioPlistAdminRoutedComponent,
     UsuarioViewAdminRoutedComponent,
     UsuarioPlistAdminRoutedComponent,
+    UsuarioNewAdminRoutedComponent,
 
 
 

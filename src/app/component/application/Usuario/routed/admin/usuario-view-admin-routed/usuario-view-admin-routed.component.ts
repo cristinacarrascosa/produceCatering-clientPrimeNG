@@ -12,8 +12,9 @@ export class UsuarioViewAdminRoutedComponent implements OnInit {
 
   id: number = 0;
   oUsuario: IUsuario;
-
+  submitted: boolean;
   usuarios: IUsuario[] = [];
+  productDialog: boolean;
 
   constructor(
     private oActivatedRoute: ActivatedRoute,
@@ -35,6 +36,11 @@ export class UsuarioViewAdminRoutedComponent implements OnInit {
       }
     })
   }
+
+  hideDialog() {
+    this.productDialog = false;
+    this.submitted = false;
+}
 
   // getUsuariosList(){
   //   this.oUsuarioService.getUsuariosList().subscribe({

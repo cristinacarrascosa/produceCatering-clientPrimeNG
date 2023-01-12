@@ -38,5 +38,51 @@
   </div>
 </div>
 
+<!-- <p-dialog [(visible)]="usuarios" [style]="{width: '450px'}" header="Product Details" [modal]="true" styleClass="p-fluid">
+  <ng-template pTemplate="content">
+      <div class="p-field">
+          <label for="nombre">Nombre</label>
+          <input type="text" pInputText id="nombre" [(ngModel)]="oUsuario.nombre" required autofocus />
+          <small class="p-invalid" *ngIf="submitted && !oUsuario.nombre">Nombre de usuario requerido.</small>
+      </div>
+      <div class="p-field">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" pInputText id="apellidos" [(ngModel)]="oUsuario.apellidos" required />
+        <small class="p-invalid" *ngIf="submitted && !oUsuario.apellidos">Apellidos requerido.</small>
+    </div>
+      <div class="p-field">
+        <label for="tipousuario">Tipo de usuario</label>
+        <input type="text" pInputText id="tipousuario" [(ngModel)]="oUsuario.tipousuario.tipo" required />
+        <small class="p-invalid" *ngIf="submitted && !oUsuario.tipousuario.tipo">Tipo de usuario requerido.</small>
+    </div>
+    <div class="p-field">
+      <label for="dni">DNI</label>
+      <input type="text" pInputText id="dni" [(ngModel)]="oUsuario.dni" required />
+      <small class="p-invalid" *ngIf="submitted && !oUsuario.dni">DNI requerido.</small>
+  </div>
+
+      <div class="p-field">
+          <label class="p-mb-3">Tipo de usuario</label>
+          <div class="p-formgrid p-grid">
+              <div class="p-field-radiobutton p-col-6">
+                  <p-radioButton id="administrador" name="tipousuario" value="administrador" [(ngModel)]="oUsuario.tipousuario.tipo"></p-radioButton>
+                  <label for="administrador">Administrador</label>
+              </div>
+              <div class="p-field-radiobutton p-col-6">
+                  <p-radioButton id="usuario" name="tipousuario" value="usuario" [(ngModel)]="oUsuario.tipousuario.tipo"></p-radioButton>
+                  <label for="usuario">Usuario</label>
+              </div>
+          </div>
+      </div>
+
+
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+      <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
+      <button pButton pRipple label="Save" icon="pi pi-check" class="p-button-text" ></button>
+  </ng-template>
+</p-dialog> -->
+
 
 

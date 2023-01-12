@@ -22,6 +22,7 @@ export class UsuarioPlistAdminRoutedComponent implements OnInit {
   page: number = 0;
   sortField: string = "";
   sortDirection: string = "";
+  totalElements: number;
 
   private pagesCount: number;
   private numberPage: number = 0;
@@ -36,12 +37,13 @@ export class UsuarioPlistAdminRoutedComponent implements OnInit {
   }
 
   getUsuariosList() {
-    this.oUsuarioService.getUsuariosList()
+    this.oUsuarioService.getUsuariosList(this.page, this.numberOfElements, this.sortField, this.sortDirection, this.strTermFilter, this.id_tipousuario)
     .subscribe({
       next: (resp: UsuarioResponse) => {
         this.usuarios = resp.content;
+        this.totalElements = resp.totalElements;
         //this.pagesCount = resp.totalPages;
-        //console.log(resp.content);
+        console.log(resp);
       },
       error: (err: HttpErrorResponse) =>{
         console.log(err);
@@ -54,6 +56,12 @@ export class UsuarioPlistAdminRoutedComponent implements OnInit {
   showAddModal(){
     this.displayAddModal = true;
     console.log("showAddModal");
+  }
+
+  setPage(e:any){
+    this.page = e.page;
+    this.numberOfElements = e.rows;
+    this.getUsuariosList();
   }
 
 

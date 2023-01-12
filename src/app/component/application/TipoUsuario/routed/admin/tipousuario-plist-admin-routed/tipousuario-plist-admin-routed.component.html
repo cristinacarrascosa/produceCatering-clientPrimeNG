@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <div class="col">
       <h1 class="titulo">Lista de tipos de usuario</h1>
@@ -18,5 +18,26 @@
       </table>
     </div>
   </div>
-</div>
+</div> -->
 
+<div class="ui-g">
+  <p-panel header="Administración de usuarios" [style]="{width: '90%'}">
+    <div class="justify-content-start" [style]="{width: '20%'}">
+      <p-button label="Añadir usuario" icon="pi pi-plus"></p-button>
+    </div>
+    <p-table [value]="pListContent">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Id</th>
+          <th>Tipo</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-tipoUsuario>
+        <tr>
+          <td>{{tipoUsuario.id}}</td>
+          <td>{{tipoUsuario.tipo}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-panel>
+</div>

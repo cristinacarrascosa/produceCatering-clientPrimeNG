@@ -10,51 +10,51 @@ import { TipousuarioService } from 'src/app/service/tipousuario.service';
 })
 export class TipousuarioPlistAdminRoutedComponent {
 
-  constructor( private oTipousuarioService: TipousuarioService) { }
+  constructor(private oTipousuarioService: TipousuarioService) { }
 
 
-  private pListContent!: ITipousuario[];
-    private pagesCount!: number;
-    private numberPage: number = 0;
-    private pageRegister: number = 5;
+  pListContent!: ITipousuario[];
+  private pagesCount!: number;
+  private numberPage: number = 0;
+  private pageRegister: number = 5;
 
-    ngOnInit(): void {
-      this.getPlist();
-    }
+  ngOnInit(): void {
+    this.getPlist();
+  }
 
-    getPlist(){
-      this.oTipousuarioService.getTipousuarioPlist(this.numberPage, this.pageRegister)
+  getPlist() {
+    this.oTipousuarioService.getTipousuarioPlist(this.numberPage, this.pageRegister)
       .subscribe({
-        next: (resp : TipoUsuarioResponse) =>{
+        next: (resp: TipoUsuarioResponse) => {
           this.pListContent = resp.content;
           this.pagesCount = resp.totalPages;
         },
-        error: (err: HttpErrorResponse) =>{
+        error: (err: HttpErrorResponse) => {
           console.log(err);
         }
       })
-    }
+  }
 
-    getPlistContent(): ITipousuario[]{
-      return this.pListContent;
-    }
+  getPlistContent(): ITipousuario[] {
+    return this.pListContent;
+  }
 
-    getpagesCount(): number{
-      return this.pagesCount;
-    }
+  getpagesCount(): number {
+    return this.pagesCount;
+  }
 
-    getNumberPage( e: number ){
-      this.numberPage = e;
-      this.getPlist();
-    }
+  getNumberPage(e: number) {
+    this.numberPage = e;
+    this.getPlist();
+  }
 
-    getPageRegister():number{
-      return this.pageRegister;
-    }
+  getPageRegister(): number {
+    return this.pageRegister;
+  }
 
-    setPageRegister( registerPage: number ){
-      this.pageRegister = registerPage;
-      this.getPlist();
-    }
+  setPageRegister(registerPage: number) {
+    this.pageRegister = registerPage;
+    this.getPlist();
+  }
 
 }

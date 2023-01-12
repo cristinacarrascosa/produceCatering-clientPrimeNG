@@ -13,7 +13,7 @@ export class UsuarioService {
   private entityURL = '/usuario';
   url: string = "";
 
-  constructor( private oHttp: HttpClient) {
+  constructor(private oHttp: HttpClient) {
     this.url = `${baseURL}${this.entityURL}`;
   }
 
@@ -50,12 +50,24 @@ export class UsuarioService {
   }
 
   newOne(oUsuario2Send: IUsuario2Send): Observable<number> {
-    return this.oHttp.post<number>(this.url+'/', oUsuario2Send);
+    return this.oHttp.post<number>(this.url + '/', oUsuario2Send);
   }
 
-  getUsuariosList(): Observable<UsuarioResponse> {
+  getUsuariosList(page: number, size: number, sort: string, direction: string, filter: string, id_tipousuario: number): Observable<UsuarioResponse> {
     let params = new HttpParams()
-      
-    return this.oHttp.get<UsuarioResponse>(this.url, {params: params});
+      .set("page", page)
+      .set("size", size)
+      .set("filter", filter);
+    if (sort != "") {
+      if (direction != "") {
+        params = params.set("sort", sort + "," + direction);
+      } else {
+        params = params.set("sort", sort);
+      }
+    }
+    if (id_tipousuario != 0) {
+      params = params.set("tipousuario", id_tipousuario);
+    }
+    return this.oHttp.get<UsuarioResponse>(this.url, { params: params });
   }
 }
