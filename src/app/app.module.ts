@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 import {TabMenuModule} from 'primeng/tabmenu';
 import {TableModule} from 'primeng/table';
@@ -8,6 +10,10 @@ import {ButtonModule} from 'primeng/button';
 import {PaginatorModule} from 'primeng/paginator';
 import {PanelModule} from 'primeng/panel';
 import {DialogModule} from 'primeng/dialog';
+import {InputTextModule} from 'primeng/inputtext';
+import {InputNumberModule} from 'primeng/inputnumber';
+import {InputMaskModule} from 'primeng/inputmask';
+
 
 import {MenuItem} from 'primeng/api';
 import { AppRoutingModule } from './app-routing.module';
@@ -26,6 +32,7 @@ import { UsuarioNewAdminRoutedComponent } from './component/application/Usuario/
 
 import { UsuarioService } from './service/usuario.service';
 import { SessionService } from './service/session.service';
+import { UsuarioEditAdminRoutedComponent } from './component/application/Usuario/routed/admin/usuario-edit-admin-routed/usuario-edit-admin-routed.component';
 
 
 
@@ -38,6 +45,7 @@ import { SessionService } from './service/session.service';
     UsuarioViewAdminRoutedComponent,
     UsuarioPlistAdminRoutedComponent,
     UsuarioNewAdminRoutedComponent,
+    UsuarioEditAdminRoutedComponent,
 
 
 
@@ -53,7 +61,11 @@ import { SessionService } from './service/session.service';
     TableModule,
     PaginatorModule,
     PanelModule,
-    DialogModule
+    DialogModule,
+    ReactiveFormsModule,
+    InputTextModule,
+    InputNumberModule,
+    InputMaskModule
 
 
 

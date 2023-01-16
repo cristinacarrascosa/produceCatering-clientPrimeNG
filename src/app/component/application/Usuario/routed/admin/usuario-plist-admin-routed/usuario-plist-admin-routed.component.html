@@ -33,9 +33,10 @@
           <td>{{usuario.tipousuario.tipo}}</td>
           <td>
             <!-- [routerLink]="['admin/usuario/new']" -->
-            <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2" [routerLink]="['/admin/usuario/new']"></button>
-            <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" ></button>
-        </td>
+            <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2"
+              [routerLink]="['/admin/usuario/new']"></button>
+            <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning"></button>
+          </td>
         </tr>
       </ng-template>
     </p-table>
@@ -43,16 +44,8 @@
       [rowsPerPageOptions]="[5,10,15,20]" (onPageChange)="setPage($event)"></p-paginator>
   </p-panel>
 </div>
+<app-usuario-edit-admin-routed
+[displayAddModal]="displayAddModal"
+(clickClose)="hideAddModal($event)">
+</app-usuario-edit-admin-routed>
 
-<p-dialog header="Añadir usuario" [(visible)]="displayAddModal" [modal]="true" [style]="{width: '50vw'}"
-  [draggable]="false" [resizable]="false">
-  <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur.
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <ng-template pTemplate="footer">
-    <p-button (click)="displayAddModal=false" label="Guardar" styleClass="p-button-text"></p-button>
-
-  </ng-template>
-</p-dialog>

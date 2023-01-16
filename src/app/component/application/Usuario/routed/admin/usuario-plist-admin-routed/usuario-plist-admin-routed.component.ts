@@ -66,41 +66,10 @@ export class UsuarioPlistAdminRoutedComponent implements OnInit {
 
 
 
-  // getPage() {
-  //  this.oUsuarioService.getUsuariosPlist(this.page, this.numberOfElements, this.strTermFilter,
-  //   this.id_tipousuario, this.sortField, this.sortDirection)
 
-  // }
 
-  // setPage(e: number) {
-  //   this.page = (e - 1);
-  //   this.getPage();
-  // }
-
-  // setRpp(rpp: number) {
-  //   this.numberOfElements = rpp;
-  //   this.getPage();
-  // }
-
-  // setFilter(term: string): void {
-  //   this.strTermFilter = term;
-  //   this.getPage();
-  // }
-
-  // setFilterByUsertype(id: number): void {
-  //   this.id_tipousuario = id;
-  //   this.getPage();
-  // }
-
-  // setOrder(order: string): void {
-  //   this.sortField = order;
-  //   if (this.sortDirection == "asc") {
-  //     this.sortDirection = "desc";
-  //   } else {
-  //     this.sortDirection = "asc";
-  //   }
-  //   this.getPage();
-  // }
-
+  hideAddModal(isClosed: boolean){
+    this.displayAddModal = !isClosed;
+  }
 
 }

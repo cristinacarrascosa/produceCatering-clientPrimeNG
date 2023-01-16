@@ -1,0 +1,44 @@
+<p-dialog
+header="Añadir usuario"
+[(visible)]="displayAddModal"
+[modal]="true"
+[style]="{width: '50vw'}"
+[draggable]="false"
+[resizable]="false"
+(onHide)="closeModal()">
+
+<form [formGroup]="usuarioForm">
+  <div class="field">
+    <label class="block" for="nombre">Nombre</label>
+    <input type="text" pInputText  id="nombre" formControlName="nombre"/>
+    <small class="p-error"
+    *ngIf="usuarioForm.controls['nombre'].invalid && usuarioForm.controls['nombre'].dirty"
+    >Nombre es requerido</small>
+  </div>
+  <div class="field">
+    <label class="block">Tipo usuario</label>
+    <p-inputNumber ></p-inputNumber>
+
+  </div>
+  <div class="p-col-12 p-md-6 p-lg-4">
+    <span>DNI</span>
+    <p-inputMask  characterPattern="[0-9]{8}[A-Z]"></p-inputMask>
+</div>
+</form>
+
+
+  <ng-template pTemplate="footer">
+    <p-button
+    (click)="closeModal()"
+    label="Cancelar"
+    styleClass="p-button-text">
+    </p-button>
+
+    <p-button
+    (click)="addUsuario()"
+    label="Añadir"
+    styleClass="p-button-text">
+    </p-button>
+
+  </ng-template>
+</p-dialog>
