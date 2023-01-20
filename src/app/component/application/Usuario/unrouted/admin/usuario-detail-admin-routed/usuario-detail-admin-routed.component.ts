@@ -10,7 +10,7 @@ import { UsuarioService } from 'src/app/service/usuario.service';
 })
 export class UsuarioDetailAdminRoutedComponent implements OnInit {
 
-  @Input() id:number;
+  @Input() id: number;
   oUsuario: IUsuario;
 
   constructor(
@@ -18,6 +18,7 @@ export class UsuarioDetailAdminRoutedComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.getOne();
   }
 
   getOne() {

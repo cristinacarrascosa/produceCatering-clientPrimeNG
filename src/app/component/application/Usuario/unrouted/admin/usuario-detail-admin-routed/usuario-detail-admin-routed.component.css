@@ -1,0 +1,34 @@
+div{
+  width: 100vw;
+  height: 70vh;
+  padding: 1em;
+
+  margin: 0 auto;
+
+
+
+}
+
+th{
+  background-color: #289f9b;
+}
+
+p-table{
+margin: 0 auto;
+width: 60vw;
+/* border-collapse: collapse; */
+
+}
+td, th{
+border: 1px solid #ddd;
+padding: 8px;
+border-radius: 5%;
+border-collapse: collapse;
+
+
+}
+
+
+
+tr:hover {background-color: #ddd;}
+
