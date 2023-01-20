@@ -29,10 +29,13 @@ import { TipousuarioPlistAdminRoutedComponent } from './component/application/Ti
 import { UsuarioViewAdminRoutedComponent } from './component/application/Usuario/routed/admin/usuario-view-admin-routed/usuario-view-admin-routed.component';
 import { UsuarioPlistAdminRoutedComponent } from './component/application/Usuario/routed/admin/usuario-plist-admin-routed/usuario-plist-admin-routed.component';
 import { UsuarioNewAdminRoutedComponent } from './component/application/Usuario/routed/admin/usuario-new-admin-routed/usuario-new-admin-routed.component';
+import { UsuarioDetailAdminRoutedComponent } from './component/application/Usuario/unrouted/admin/usuario-detail-admin-routed/usuario-detail-admin-routed.component';
+import { UsuarioEditAdminRoutedComponent } from './component/application/Usuario/routed/admin/usuario-edit-admin-routed/usuario-edit-admin-routed.component';
+
+
 
 import { UsuarioService } from './service/usuario.service';
 import { SessionService } from './service/session.service';
-import { UsuarioEditAdminRoutedComponent } from './component/application/Usuario/routed/admin/usuario-edit-admin-routed/usuario-edit-admin-routed.component';
 
 
 
@@ -46,6 +49,7 @@ import { UsuarioEditAdminRoutedComponent } from './component/application/Usuario
     UsuarioPlistAdminRoutedComponent,
     UsuarioNewAdminRoutedComponent,
     UsuarioEditAdminRoutedComponent,
+    UsuarioDetailAdminRoutedComponent,
 
 
 
