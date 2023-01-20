@@ -1,7 +1,7 @@
 <div class="container">
- 
-          <table class="tabla">
-              <tbody>
+          <p-table styleClass="p-datatable-striped" [value]="data" id="tabla">
+            <ng-template pTemplate="body" let-oUsuario>
+
                   <tr>
                       <th>Id</th>
                       <td>{{oUsuario.id}}</td>
@@ -19,7 +19,7 @@
                       <td>{{oUsuario.dni}}</td>
                   </tr>
                   <tr>
-                      <th>email</th>
+                      <th>Email</th>
                       <td>{{oUsuario.email}}</td>
                   </tr>
                   <tr>
@@ -30,7 +30,7 @@
                   <th>Tipo de Usuario</th>
                   <td>{{oUsuario.tipousuario.tipo}}</td>
               </tr>
-              </tbody>
-          </table>
+            </ng-template>
+          </p-table>
       </div>
 

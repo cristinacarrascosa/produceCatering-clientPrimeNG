@@ -1,34 +1,31 @@
-div{
-  width: 100vw;
-  height: 70vh;
-  padding: 1em;
+div {
+  display: flex;
+  justify-content: center;
+  margin: 2%;
 
+
+
+
+}
+
+#tabla {
   margin: 0 auto;
-
-
-
-}
-
-th{
-  background-color: #289f9b;
-}
-
-p-table{
-margin: 0 auto;
-width: 60vw;
-/* border-collapse: collapse; */
-
-}
-td, th{
-border: 1px solid #ddd;
-padding: 8px;
-border-radius: 5%;
-border-collapse: collapse;
-
+  width: 80%;
 
 }
 
 
+th {
+  border: 0.8px solid #ddd;
+  padding: 8px;
+  /*border-radius: 5%;*/
+  border-collapse: collapse;
+  background-color: #28689f;
+  color: white;
+}
 
-tr:hover {background-color: #ddd;}
 
+
+tr:hover {
+  background-color: #ddd;
+}

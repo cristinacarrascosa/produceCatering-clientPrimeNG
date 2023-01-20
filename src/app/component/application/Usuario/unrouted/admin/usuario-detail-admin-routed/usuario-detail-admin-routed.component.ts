@@ -12,6 +12,7 @@ export class UsuarioDetailAdminRoutedComponent implements OnInit {
 
   @Input() id: number;
   oUsuario: IUsuario;
+  data: any =[];
 
   constructor(
     private oUsuarioService: UsuarioService
@@ -25,6 +26,7 @@ export class UsuarioDetailAdminRoutedComponent implements OnInit {
     this.oUsuarioService.getOne(this.id).subscribe({
       next: (data: IUsuario) => {
         this.oUsuario = data;
+        this.data.push(this.oUsuario);
         //console.log(data);
       }
     })
