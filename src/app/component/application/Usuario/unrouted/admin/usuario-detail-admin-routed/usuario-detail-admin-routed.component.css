@@ -18,10 +18,10 @@ div {
 th {
   border: 0.8px solid #ddd;
   padding: 8px;
-  /*border-radius: 5%;*/
+  border-radius: 5%;
   border-collapse: collapse;
-  background-color: #28689f;
-  color: white;
+  background-color: blueviolet;
+
 }
 
 

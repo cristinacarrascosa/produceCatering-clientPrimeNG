@@ -36,6 +36,7 @@ import { UsuarioEditAdminRoutedComponent } from './component/application/Usuario
 
 import { UsuarioService } from './service/usuario.service';
 import { SessionService } from './service/session.service';
+import { UsuarioRemoveAdminRoutedComponent } from './component/application/Usuario/routed/admin/usuario-remove-admin-routed/usuario-remove-admin-routed.component';
 
 
 
@@ -50,6 +51,7 @@ import { SessionService } from './service/session.service';
     UsuarioNewAdminRoutedComponent,
     UsuarioEditAdminRoutedComponent,
     UsuarioDetailAdminRoutedComponent,
+    UsuarioRemoveAdminRoutedComponent,
 
 
 
