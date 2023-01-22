@@ -36,16 +36,17 @@
             <td>{{usuario.login}}</td>
             <td>{{usuario.tipousuario.tipo}}</td>
             <td>
-            <div>
-              <!-- [routerLink]="['/admin/usuario/new']" -->
-              <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2"
-                [routerLink]="['/admin/usuario/edit',usuario.id]"></button>
-              <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning">
+              <div>
+                <!-- [routerLink]="['/admin/usuario/new']" -->
+                <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2"
+                  ></button>
+                <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning"
+                  [routerLink]="['/admin','usuario','remove',usuario.id]">
 
-              </button>
-              <button pButton pRipple icon="pi pi-eye" class="p-button-rounded p-button-help mr-2"
-              [routerLink]="['/admin/usuario/view',usuario.id]"></button>
-            </div>
+                </button>
+                <button pButton pRipple icon="pi pi-eye" class="p-button-rounded p-button-help mr-2"
+                  [routerLink]="['/admin/usuario/view',usuario.id]"></button>
+              </div>
             </td>
           </tr>
         </ng-template>
@@ -55,5 +56,5 @@
       [rowsPerPageOptions]="[5,10,15,20]" (onPageChange)="setPage($event)"></p-paginator>
   </p-panel>
 </div>
-<app-usuario-edit-admin-routed [displayAddModal]="displayAddModal" (clickClose)="hideAddModal($event)">
-</app-usuario-edit-admin-routed>
+<!-- <app-usuario-edit-admin-routed [displayAddModal]="displayAddModal" (clickClose)="hideAddModal($event)">
+</app-usuario-edit-admin-routed> -->

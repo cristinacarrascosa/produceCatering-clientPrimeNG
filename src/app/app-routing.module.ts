@@ -6,6 +6,7 @@ import { UsuarioViewAdminRoutedComponent } from './component/application/Usuario
 import { UsuarioPlistAdminRoutedComponent } from './component/application/Usuario/routed/admin/usuario-plist-admin-routed/usuario-plist-admin-routed.component';
 import { UsuarioNewAdminRoutedComponent } from './component/application/Usuario/routed/admin/usuario-new-admin-routed/usuario-new-admin-routed.component';
 import { UsuarioEditAdminRoutedComponent } from './component/application/Usuario/routed/admin/usuario-edit-admin-routed/usuario-edit-admin-routed.component';
+import { UsuarioRemoveAdminRoutedComponent } from './component/application/Usuario/routed/admin/usuario-remove-admin-routed/usuario-remove-admin-routed.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'admin/usuario/plist', component: UsuarioPlistAdminRoutedComponent},
   { path: 'admin/usuario/new', component: UsuarioNewAdminRoutedComponent},
   { path: 'admin/usuario/edit/:id', component: UsuarioEditAdminRoutedComponent},
+  { path: 'admin/usuario/remove/:id', component: UsuarioRemoveAdminRoutedComponent},
 
 ];
 

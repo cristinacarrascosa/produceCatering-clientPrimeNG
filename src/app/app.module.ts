@@ -13,6 +13,11 @@ import {DialogModule} from 'primeng/dialog';
 import {InputTextModule} from 'primeng/inputtext';
 import {InputNumberModule} from 'primeng/inputnumber';
 import {InputMaskModule} from 'primeng/inputmask';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {ConfirmationService} from 'primeng/api';
+import {MessageService} from 'primeng/api';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
 
 
 import {MenuItem} from 'primeng/api';
@@ -31,12 +36,12 @@ import { UsuarioPlistAdminRoutedComponent } from './component/application/Usuari
 import { UsuarioNewAdminRoutedComponent } from './component/application/Usuario/routed/admin/usuario-new-admin-routed/usuario-new-admin-routed.component';
 import { UsuarioDetailAdminRoutedComponent } from './component/application/Usuario/unrouted/admin/usuario-detail-admin-routed/usuario-detail-admin-routed.component';
 import { UsuarioEditAdminRoutedComponent } from './component/application/Usuario/routed/admin/usuario-edit-admin-routed/usuario-edit-admin-routed.component';
+import { UsuarioRemoveAdminRoutedComponent } from './component/application/Usuario/routed/admin/usuario-remove-admin-routed/usuario-remove-admin-routed.component';
 
 
 
 import { UsuarioService } from './service/usuario.service';
 import { SessionService } from './service/session.service';
-import { UsuarioRemoveAdminRoutedComponent } from './component/application/Usuario/routed/admin/usuario-remove-admin-routed/usuario-remove-admin-routed.component';
 
 
 
@@ -71,14 +76,22 @@ import { UsuarioRemoveAdminRoutedComponent } from './component/application/Usuar
     ReactiveFormsModule,
     InputTextModule,
     InputNumberModule,
-    InputMaskModule
+    InputMaskModule,
+    ConfirmDialogModule,
+    MessagesModule,
+    MessageModule
+
+
+
 
 
 
   ],
   providers: [
     UsuarioService,
-    SessionService
+    SessionService,
+    ConfirmationService,
+    MessageService
   ],
   bootstrap: [AppComponent]
 })
