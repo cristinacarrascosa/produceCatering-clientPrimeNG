@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import {TabMenuModule} from 'primeng/tabmenu';
@@ -23,6 +23,8 @@ import {MessageModule} from 'primeng/message';
 import {MenuItem} from 'primeng/api';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+
+
 
 import { AppComponent } from './app.component';
 
@@ -74,6 +76,7 @@ import { SessionService } from './service/session.service';
     PanelModule,
     DialogModule,
     ReactiveFormsModule,
+    FormsModule,
     InputTextModule,
     InputNumberModule,
     InputMaskModule,

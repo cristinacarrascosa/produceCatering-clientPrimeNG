@@ -13,6 +13,7 @@ export class UsuarioPlistAdminRoutedComponent implements OnInit {
 
   usuarios: IUsuario[] = [];
   displayAddModal = false;
+  displayBasic: boolean;
 
   responseFromServer: IPage<IUsuario>;
   //
@@ -64,7 +65,9 @@ export class UsuarioPlistAdminRoutedComponent implements OnInit {
     this.getUsuariosList();
   }
 
-
+  showBasicDialog() {
+    this.displayBasic = true;
+}
 
 
 
