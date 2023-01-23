@@ -44,6 +44,7 @@ import { UsuarioRemoveAdminRoutedComponent } from './component/application/Usuar
 
 import { UsuarioService } from './service/usuario.service';
 import { SessionService } from './service/session.service';
+import { UsuarioFormAdminUnroutedComponent } from './component/application/Usuario/unrouted/admin/usuario-form-admin-unrouted/usuario-form-admin-unrouted.component';
 
 
 
@@ -59,6 +60,7 @@ import { SessionService } from './service/session.service';
     UsuarioEditAdminRoutedComponent,
     UsuarioDetailAdminRoutedComponent,
     UsuarioRemoveAdminRoutedComponent,
+    UsuarioFormAdminUnroutedComponent,
 
 
 
