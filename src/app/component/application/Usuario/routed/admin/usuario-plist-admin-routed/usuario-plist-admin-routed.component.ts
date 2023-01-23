@@ -12,8 +12,8 @@ import { UsuarioService } from 'src/app/service/usuario.service';
 export class UsuarioPlistAdminRoutedComponent implements OnInit {
 
   usuarios: IUsuario[] = [];
-  displayAddModal = false;
-  displayBasic: boolean;
+  
+  displayBasic = false;
 
   responseFromServer: IPage<IUsuario>;
   //
@@ -54,10 +54,7 @@ export class UsuarioPlistAdminRoutedComponent implements OnInit {
     )
   }
 
-  showAddModal(){
-    this.displayAddModal = true;
-    console.log("showAddModal");
-  }
+
 
   setPage(e:any){
     this.page = e.page;
@@ -69,10 +66,8 @@ export class UsuarioPlistAdminRoutedComponent implements OnInit {
     this.displayBasic = true;
 }
 
-
-
   hideAddModal(isClosed: boolean){
-    this.displayAddModal = !isClosed;
+    this.displayBasic = !isClosed;
   }
 
 }

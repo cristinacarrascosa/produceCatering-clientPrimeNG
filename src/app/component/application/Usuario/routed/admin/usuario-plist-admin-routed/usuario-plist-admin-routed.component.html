@@ -1,20 +1,11 @@
 <div class="page-content" style="height: calc(100vh - 149px)">
   <p-panel header="Administración de usuarios" [style]="{width: '90%'}">
-  <p-panel>
-    <p-button (click)="showBasicDialog()" icon="pi pi-plus" label="Nuevo"
-    [style]="{width: '7vw'}"></p-button>
-    <p-dialog header="Header" [(visible)]="displayBasic" [style]="{width: '40vw'}" [maximizable]="true" [breakpoints]="{'960px': '75vw'}">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-           
+  <div class="flex justify-content-between">
 
-        <ng-template pTemplate="footer">
-            <p-button icon="pi pi-check" (click)="displayBasic=false" label="Guardar" styleClass="p-button-text"></p-button>
-        </ng-template>
-    </p-dialog>
-</p-panel>
+    <p-button (click)="showBasicDialog()" icon="pi pi-plus" label="Añadir"
+    [style]="{width: '8vw'}"></p-button>
+
+</div>
     <!-- <div class="justify-content-start" [style]="{width: '10%'}" (click)="showAddModal()">
       <p-button label="Añadir usuario" icon="pi pi-plus" class="p-button-success mr-2"></p-button> -->
       <!-- <p-button label="Editar" icon="pi pi-pencil" ></p-button>
@@ -70,3 +61,8 @@
       [rowsPerPageOptions]="[5,10,15,20]" (onPageChange)="setPage($event)"></p-paginator>
   </p-panel>
 </div>
+
+<app-usuario-new-admin-routed
+[displayBasic]="displayBasic"
+(clickClose)="hideAddModal($event)">
+</app-usuario-new-admin-routed>

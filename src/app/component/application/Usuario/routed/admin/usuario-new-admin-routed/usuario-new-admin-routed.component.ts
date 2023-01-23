@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IUsuario, IUsuario2Form, IUsuario2Send } from 'src/app/model/usuario-interface';
@@ -12,6 +12,9 @@ import { UsuarioService } from 'src/app/service/usuario.service';
   styleUrls: ['./usuario-new-admin-routed.component.css']
 })
 export class UsuarioNewAdminRoutedComponent implements OnInit {
+
+  @Input() displayBasic: boolean = true;
+  @Output() clickClose: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   oUsuario: IUsuario = null;
   oUsuario2Form: IUsuario2Form;
@@ -45,19 +48,21 @@ export class UsuarioNewAdminRoutedComponent implements OnInit {
   hideDialog() {
     this.usuarioDialog = false;
     // this.onSubmit = false;
-}
+  }
 
   onSubmit() {
   }
-  showAddModal(){
+  showAddModal() {
     this.usuarioDialog = true;
     console.log("showAddModal");
   }
 
-  hideAddModal(isClosed: boolean){
+  hideAddModal(isClosed: boolean) {
     this.usuarioDialog = !isClosed;
   }
-
+  closeModal() {
+    this.clickClose.emit(true);
+  }
 
 
 }
