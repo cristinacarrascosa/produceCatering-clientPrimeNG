@@ -38,15 +38,15 @@ export class UsuarioNewAdminRoutedComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.oForm = <FormGroup>this.oFormBuilder.group({
-      id: [""],
-      nombre: ["", [Validators.required, Validators.minLength(3), Validators.maxLength(15)]],
-      apellidos: ["", [Validators.required, Validators.minLength(3), Validators.maxLength(60)]],
-      dni: ["", [Validators.required, Validators.minLength(8), Validators.maxLength(10)]],
-      email: ["", [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
-      login: ["", [Validators.required, Validators.minLength(6), Validators.maxLength(15)]],
-      id_tipousuario: ["", [Validators.required, Validators.pattern(/^\d{1,6}$/)]]
-    });
+    // this.oForm = <FormGroup>this.oFormBuilder.group({
+    //   id: [""],
+    //   nombre: ["", [Validators.required, Validators.minLength(3), Validators.maxLength(15)]],
+    //   apellidos: ["", [Validators.required, Validators.minLength(3), Validators.maxLength(60)]],
+    //   dni: ["", [Validators.required, Validators.minLength(8), Validators.maxLength(10)]],
+    //   email: ["", [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
+    //   login: ["", [Validators.required, Validators.minLength(6), Validators.maxLength(15)]],
+    //   id_tipousuario: ["", [Validators.required, Validators.pattern(/^\d{1,6}$/)]]
+    // });
   }
 
   hideDialog() {

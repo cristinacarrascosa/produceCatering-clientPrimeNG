@@ -5,7 +5,7 @@ export abstract class Constants {
   };
 
   static readonly ENTITIES = {
-      usuario: "usuario", tipousuario: "tipousuario", producttype: "tipoproducto"
+      usuario: "usuario", tipousuario: "tipousuario"
   };
 
   static readonly PROFILES = {
