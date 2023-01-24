@@ -1,1 +1,63 @@
-<p>usuario-form-admin-unrouted works!</p>
+<form novalidate [formGroup]="oForm" (ngSubmit)="onSubmit()" *ngIf="status==null">
+
+  <div class="field">
+      <label for="id" class="block"> {{oMetadataService.getName('ID')}}</label>
+
+      <input class="form-control" type="text" name="id" formControlName="id" id="id" pInputText readonly>
+
+  </div>
+
+  <div class="field">
+    <label class="block" for="nombre">Nombre</label>
+    <input type="text" pInputText  id="nombre" formControlName="nombre"/>
+    <small class="p-error"
+    *ngIf="oForm.controls['nombre'].invalid && oForm.controls['nombre'].dirty"
+    >El campo es obligatorio</small>
+    <small class="p-error" *ngIf="oForm.controls['nombre'].dirty &&  oForm.controls['nombre'].errors?.['maxlength']">
+    La longitud máxima es de 10 caracteres.</small>
+  </div>
+
+  <div class="field">
+    <label class="block" for="apellidos">Apellidos</label>
+    <input type="text" pInputText  id="apellidos" formControlName="apellidos"/>
+    <small class="p-error"
+    *ngIf="oForm.controls['apellidos'].invalid && oForm.controls['apellidos'].dirty"
+    >El campo es obligatorio</small>
+  </div>
+
+  <div class="field">
+    <label class="block" for="dni">DNI</label>
+    <input type="text" pInputText  id="dni" formControlName="dni"/>
+    <small class="p-error"
+    *ngIf="oForm.controls['dni'].invalid && oForm.controls['dni'].dirty"
+    >El campo es obligatorio</small>
+  </div>
+
+  <div class="field">
+    <label class="block" for="email">Email</label>
+    <input type="text" pInputText  id="email" formControlName="email"/>
+    <small class="p-error"
+    *ngIf="oForm.controls['email'].invalid && oForm.controls['email'].dirty"
+    >El campo es obligatorio</small>
+  </div>
+
+  <div class="field">
+    <label class="block" for="tipousuario">Tipo de usuario</label>
+    <p-dropdown
+    [options]="tiposUsuario"
+    [(ngModel)]="tipousuarioSelect"
+    placeholder="Tipo de usuario"
+    optionLabel="tipo"
+    [showClear]="true"
+    id="id_tipousuario"
+    formControlName="id_tipousuario">
+  </p-dropdown>
+  </div>
+
+ 
+</form>
+
+
+
+
+

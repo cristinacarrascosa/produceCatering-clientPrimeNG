@@ -18,6 +18,8 @@ import {ConfirmationService} from 'primeng/api';
 import {MessageService} from 'primeng/api';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
+import {ToastModule} from 'primeng/toast';
+import {DropdownModule} from 'primeng/dropdown';
 
 
 import {MenuItem} from 'primeng/api';
@@ -84,7 +86,9 @@ import { UsuarioFormAdminUnroutedComponent } from './component/application/Usuar
     InputMaskModule,
     ConfirmDialogModule,
     MessagesModule,
-    MessageModule
+    MessageModule,
+    ToastModule,
+    DropdownModule
 
 
 

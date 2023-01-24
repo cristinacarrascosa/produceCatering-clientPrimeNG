@@ -5,6 +5,8 @@ import { IUsuario, IUsuario2Form, IUsuario2Send } from 'src/app/model/usuario-in
 import { MetadataService } from 'src/app/service/metadata.service';
 import { TipousuarioService } from 'src/app/service/tipousuario.service';
 import { UsuarioService } from 'src/app/service/usuario.service';
+import { MessageService } from 'primeng/api';
+
 
 @Component({
   selector: 'app-usuario-new-admin-routed',
@@ -15,6 +17,7 @@ export class UsuarioNewAdminRoutedComponent implements OnInit {
 
   @Input() displayBasic: boolean = true;
   @Output() clickClose: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() clickAdd: EventEmitter<any> = new EventEmitter<any>();
 
   oUsuario: IUsuario = null;
   oUsuario2Form: IUsuario2Form;
@@ -30,7 +33,8 @@ export class UsuarioNewAdminRoutedComponent implements OnInit {
     private oActivatedRoute: ActivatedRoute,
     private oUsuarioService: UsuarioService,
     private oFormBuilder: FormBuilder,
-    private oTipousuarioService: TipousuarioService
+    private oTipousuarioService: TipousuarioService,
+    private messageService: MessageService
   ) { }
 
   ngOnInit(): void {
@@ -61,6 +65,7 @@ export class UsuarioNewAdminRoutedComponent implements OnInit {
     this.usuarioDialog = !isClosed;
   }
   closeModal() {
+    this.oForm.reset();
     this.clickClose.emit(true);
   }
 
